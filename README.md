@@ -1,90 +1,117 @@
-# documents
+# 2024软件工程——轮椅嵌入队
+## 项目概述
 
-## Getting started
+本项目是一个为肢体运动障碍人士设计的电动轮椅拓展控制系统，致力于利用低成本手段实现普通电动轮椅的智能化改造，基于多传感器环境感知等技术为肢体障碍人士提供全新的出行方式。
 
-To make it easy for you to get started with GitLab, here's a list of recommended next steps.
+本系统设计包括头部微动检测、环境感知和机械控制三个部分。其中，头部微动检测使用卡尔曼滤波算法来处理数据，提高系统状态估计的准确性；环境感知部分利用激光雷达实现自动避障；机械控制部分通过解耦设计，将轮椅控制器的复杂运动简化为更易于控制的形式。项目通过仿真实验和实机测试，验证了系统的有效性。
 
-Already a pro? Just edit this README.md and make it your own. Want to make it easy? [Use the template at the bottom](#editing-this-readme)!
+本产品最终实现了头部姿态控制轮椅运动、手机APP控制轮椅运动、自动避障、跟随运动与过速检测等功能。本系统适用于20多种品牌和型号的电动轮椅，操作简单且成本较低，具有普适性。相关技术已申请国家专利多项，并发表高水平期刊论文，展现出巨大的市场潜力。
 
-## Add your files
+## 项目文档
 
-- [ ] [Create](https://docs.gitlab.com/ee/user/project/repository/web_editor.html#create-a-file) or [upload](https://docs.gitlab.com/ee/user/project/repository/web_editor.html#upload-a-file) files
-- [ ] [Add files using the command line](https://docs.gitlab.com/ee/gitlab-basics/add-file.html#add-a-file-using-the-command-line) or push an existing Git repository with the following command:
+**历次答辩PPT均在对应的目录下，其中软件测试与迭代开发PPT在STR-软件测试报告目录下。另外，展示视频在pictures目录下。**
 
+```bash
+├── pictures                       # 展示图片及演示视频
+├── SDD-软件设计说明                 # 软件设计说明文档及PPT
+├── SDP-软件开发计划                 # 软件开发计划文档及PPT
+├── SRS-软件需求规格说明              # 软件需求规格说明文档
+├── STP-软件测试计划                 # 软件测试计划说明文档及PPT
+├── STR-软件测试报告                 # 软件测试报告文档及迭代开发PPT
+├── 智能轮椅项目总结.pptx             # 项目总结PPT
+├── README.md                      # 项目介绍文档
+└──
 ```
-cd existing_repo
-git remote add origin http://gitlab.oo.buaa.edu.cn/2024_embedded_software/friday-2/team7/documents.git
-git branch -M main
-git push -uf origin main
+
+## 源码结构
+
+项目源代码在小组仓库的[SouceCode](http://gitlab.oo.buaa.edu.cn/2024_embedded_software/friday-2/team7/sourcecode)项目中，main分支为项目汇总代码，不同功能模块（软件、硬件、仿真等）的开发代码在各自的分支下。项目源码结构如下
+
+```bash
+├── Android_App             # Android App源代码
+├── OpenMV                  # OpenMV摄像头内部烧录的跟踪代码
+├── pictures                # 展示图片
+├── Uart_Servo              # 舵机驱动代码
+├── app.apk                 # 手机APP打包文件，在手机上安装即可使用
+├── wheel_chair_v3.0        # ROS端主代码
+│   ├── build         
+│   ├── devel             
+│   ├── src                      # 功能包
+│   │   ├── android              # 与app通信节点
+│   │   ├── imu                  # 头部姿态感知模块
+│   │   ├── main                 # 控制器模块
+│   │   ├── openmv               # 跟踪模块
+│   │   ├── rplidar_ros          # 雷达模块
+│   │   ├── turtle               # 控制模块
+│   └── ├── yahboomcar_laser     # 避障模块
+└──
 ```
 
-## Integrate with your tools
+## 展示视频
 
-- [ ] [Set up project integrations](http://gitlab.oo.buaa.edu.cn/2024_embedded_software/friday-2/team7/documents/-/settings/integrations)
+![硬件结构](pictures/head_front.GIF)
 
-## Collaborate with your team
+![硬件结构](pictures/head_back.GIF)
 
-- [ ] [Invite team members and collaborators](https://docs.gitlab.com/ee/user/project/members/)
-- [ ] [Create a new merge request](https://docs.gitlab.com/ee/user/project/merge_requests/creating_merge_requests.html)
-- [ ] [Automatically close issues from merge requests](https://docs.gitlab.com/ee/user/project/issues/managing_issues.html#closing-issues-automatically)
-- [ ] [Enable merge request approvals](https://docs.gitlab.com/ee/user/project/merge_requests/approvals/)
-- [ ] [Automatically merge when pipeline succeeds](https://docs.gitlab.com/ee/user/project/merge_requests/merge_when_pipeline_succeeds.html)
+![硬件结构](pictures/head_left.GIF)
 
-## Test and Deploy
+![硬件结构](pictures/head_right.GIF)
 
-Use the built-in continuous integration in GitLab.
+## 小组分工
+应卓航： 机械设计、舵机控制代码、总控代码、软件开发文档
 
-- [ ] [Get started with GitLab CI/CD](https://docs.gitlab.com/ee/ci/quick_start/index.html)
-- [ ] [Analyze your code for known vulnerabilities with Static Application Security Testing(SAST)](https://docs.gitlab.com/ee/user/application_security/sast/)
-- [ ] [Deploy to Kubernetes, Amazon EC2, or Amazon ECS using Auto Deploy](https://docs.gitlab.com/ee/topics/autodevops/requirements.html)
-- [ ] [Use pull-based deployments for improved Kubernetes management](https://docs.gitlab.com/ee/user/clusters/agent/)
-- [ ] [Set up protected environments](https://docs.gitlab.com/ee/ci/environments/protected_environments.html)
+陈浩宇： 通信调试、总控代码（主要编写）、软件设计说明及部分软件测试计划
 
-***
+张飘： 头部控制、总控代码（主要编写）、软件测试计划
 
-# Editing this README
+董鹄铭： 避障调试、跟随模式、总控代码、软件需求规格说明
 
-When you're ready to make this README your own, just edit this file and use the handy template below (or feel free to structure it however you want - this is just a starting point!). Thank you to [makeareadme.com](https://www.makeareadme.com/) for this template.
+龚照徽： 手机控制、软件测试报告
 
-## Suggestions for a good README
-Every project is different, so consider which of these sections apply to yours. The sections used in the template are suggestions for most open source projects. Also keep in mind that while a README can be too long and detailed, too long is better than too short. If you think your README is too long, consider utilizing another form of documentation rather than cutting out information.
+## 验收成果
+五次答辩 + 一次系统验收
 
-## Name
-Choose a self-explaining name for your project.
+### 硬件结构
 
-## Description
-Let people know what your project can do specifically. Provide context and add a link to any reference visitors might be unfamiliar with. A list of Features or a Background subsection can also be added here. If there are alternatives to your project, this is a good place to list differentiating factors.
+![硬件结构](pictures/硬件2.png)
 
-## Badges
-On some READMEs, you may see small images that convey metadata, such as whether or not all the tests are passing for the project. You can use Shields to add some to your README. Many services also have instructions for adding a badge.
+![硬件结构](pictures/硬件1.png)
 
-## Visuals
-Depending on what you are making, it can be a good idea to include screenshots or even a video (you'll frequently see GIFs rather than actual videos). Tools like ttygif can help, but check out Asciinema for a more sophisticated method.
+### 系统结构
 
-## Installation
-Within a particular ecosystem, there may be a common way of installing things, such as using Yarn, NuGet, or Homebrew. However, consider the possibility that whoever is reading your README is a novice and would like more guidance. Listing specific steps helps remove ambiguity and gets people to using your project as quickly as possible. If it only runs in a specific context like a particular programming language version or operating system or has dependencies that have to be installed manually, also add a Requirements subsection.
+#### 系统架构
 
-## Usage
-Use examples liberally, and show the expected output if you can. It's helpful to have inline the smallest example of usage that you can demonstrate, while providing links to more sophisticated examples if they are too long to reasonably include in the README.
+![系统架构](pictures/架构.png)
 
-## Support
-Tell people where they can go to for help. It can be any combination of an issue tracker, a chat room, an email address, etc.
+### 技术介绍
 
-## Roadmap
-If you have ideas for releases in the future, it is a good idea to list them in the README.
+- 前端：`Android App`框架
+- 数据库：`MySQL`。
+- 机器人端：`ROS`，`RosBridge`，`ssh`。
 
-## Contributing
-State if you are open to contributions and what your requirements are for accepting them.
+## 环境配置
 
-For people who want to make changes to your project, it's helpful to have some documentation on how to get started. Perhaps there is a script that they should run or some environment variables that they need to set. Make these steps explicit. These instructions could also be useful to your future self.
+### 环境及软件需求
 
-You can also document commands to lint the code or run tests. These steps help to ensure high code quality and reduce the likelihood that the changes inadvertently break something. Having instructions for running tests is especially helpful if it requires external setup, such as starting a Selenium server for testing in a browser.
+- Ubuntu 20.04 LTS
+- ROS Noetic
+- python 3.6
+- MySQL 5.7
 
-## Authors and acknowledgment
-Show your appreciation to those who have contributed to the project.
+### 运行说明
 
-## License
-For open source projects, say how it is licensed.
+- RosBridge运行在树莓派电脑`172.20.10.8:9090`，需要避免端口被占用。
+- 进入ROS目录下，运行命令`roslaunch main lanunch.launch `启动ROS端服务。
+- 手机APP与轮椅进行连接后，即可正常使用各个功能。
+- 由于建图模式内存占用过多，需要单独启动`ros_launch rplidar_ros test_gmapping.launch`
 
-## Project status
-If you have run out of energy or time for your project, put a note at the top of the README saying that development has slowed down or stopped completely. Someone may choose to fork your project or volunteer to step in as a maintainer or owner, allowing your project to keep going. You can also make an explicit request for maintainers.
+### APP说明
+
+![APP](pictures/app.png)
+
+* 点击连接设备与轮椅进行RosBridge连接
+* 手动IP为手动配置轮椅树莓派的IP地址 ，默认为172.20.10.8
+* 重置IP为将树莓派IP地址恢复为默认地址
+* 状态查询是查询当前连接状态
+* 系统更新是更新为最新代码
+

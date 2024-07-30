@@ -1,0 +1,81 @@
+<mxfile host="Electron" modified="2024-06-18T14:20:02.507Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/24.1.0 Chrome/120.0.6099.109 Electron/28.1.0 Safari/537.36" etag="9zOsEc31lAJX1ka9rf5E" version="24.1.0" type="device">
+  <diagram name="第 1 页" id="WPrlZGeOF3hVQLnUC7tm">
+    <mxGraphModel dx="2048" dy="823" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="VAF6EMTIg4425MwKRRoA-4" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="VAF6EMTIg4425MwKRRoA-1" target="VAF6EMTIg4425MwKRRoA-3">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="VAF6EMTIg4425MwKRRoA-1" value="&lt;font style=&quot;font-size: 18px;&quot;&gt;系统启动&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="190" y="170" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="VAF6EMTIg4425MwKRRoA-6" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="VAF6EMTIg4425MwKRRoA-3" target="VAF6EMTIg4425MwKRRoA-19">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="250" y="410" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="VAF6EMTIg4425MwKRRoA-3" value="&lt;font style=&quot;font-size: 18px;&quot;&gt;IMU校准&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="190" y="280" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="VAF6EMTIg4425MwKRRoA-9" value="指令生成周期" style="swimlane;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="-10" y="360" width="680" height="630" as="geometry" />
+        </mxCell>
+        <mxCell id="VAF6EMTIg4425MwKRRoA-11" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="VAF6EMTIg4425MwKRRoA-9" source="VAF6EMTIg4425MwKRRoA-5" target="VAF6EMTIg4425MwKRRoA-10">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="VAF6EMTIg4425MwKRRoA-5" value="&lt;font style=&quot;font-size: 18px;&quot;&gt;IMU数据更新&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="VAF6EMTIg4425MwKRRoA-9">
+          <mxGeometry x="207.5" y="190" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="VAF6EMTIg4425MwKRRoA-13" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="VAF6EMTIg4425MwKRRoA-9" source="VAF6EMTIg4425MwKRRoA-10" target="VAF6EMTIg4425MwKRRoA-12">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="VAF6EMTIg4425MwKRRoA-10" value="&lt;font style=&quot;font-size: 18px;&quot;&gt;数据解析与再发布&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="VAF6EMTIg4425MwKRRoA-9">
+          <mxGeometry x="207.5" y="285" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="VAF6EMTIg4425MwKRRoA-17" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="VAF6EMTIg4425MwKRRoA-9" source="VAF6EMTIg4425MwKRRoA-12" target="VAF6EMTIg4425MwKRRoA-15">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="VAF6EMTIg4425MwKRRoA-12" value="&lt;font style=&quot;font-size: 18px;&quot;&gt;回调函数触发&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="VAF6EMTIg4425MwKRRoA-9">
+          <mxGeometry x="207.5" y="380" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="VAF6EMTIg4425MwKRRoA-25" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="VAF6EMTIg4425MwKRRoA-9" source="VAF6EMTIg4425MwKRRoA-15" target="VAF6EMTIg4425MwKRRoA-19">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="60" y="100" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="160" y="520" />
+              <mxPoint x="160" y="105" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="VAF6EMTIg4425MwKRRoA-15" value="&lt;font style=&quot;font-size: 18px;&quot;&gt;生成并发布最终指令&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="VAF6EMTIg4425MwKRRoA-9">
+          <mxGeometry x="207.5" y="490" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="VAF6EMTIg4425MwKRRoA-20" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="VAF6EMTIg4425MwKRRoA-9" source="VAF6EMTIg4425MwKRRoA-19" target="VAF6EMTIg4425MwKRRoA-5">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="VAF6EMTIg4425MwKRRoA-21" value="是" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="VAF6EMTIg4425MwKRRoA-20">
+          <mxGeometry x="-0.4" y="2" relative="1" as="geometry">
+            <mxPoint x="8" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="VAF6EMTIg4425MwKRRoA-22" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="VAF6EMTIg4425MwKRRoA-9" source="VAF6EMTIg4425MwKRRoA-19">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="417.5" y="105" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="VAF6EMTIg4425MwKRRoA-23" value="否" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="VAF6EMTIg4425MwKRRoA-22">
+          <mxGeometry x="-0.3105" y="3" relative="1" as="geometry">
+            <mxPoint x="2" y="-12" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="VAF6EMTIg4425MwKRRoA-19" value="&lt;font style=&quot;font-size: 18px;&quot;&gt;蓝牙连接是否正常&lt;/font&gt;" style="rhombus;whiteSpace=wrap;html=1;" vertex="1" parent="VAF6EMTIg4425MwKRRoA-9">
+          <mxGeometry x="180" y="60" width="175" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="VAF6EMTIg4425MwKRRoA-24" value="&lt;font style=&quot;font-size: 18px;&quot;&gt;运动指令设置为停止，告知客户端发生错误&lt;/font&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="VAF6EMTIg4425MwKRRoA-9">
+          <mxGeometry x="417.5" y="75" width="230" height="75" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

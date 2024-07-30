@@ -1,0 +1,109 @@
+<mxfile host="Electron" modified="2024-06-18T15:12:58.208Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/24.1.0 Chrome/120.0.6099.109 Electron/28.1.0 Safari/537.36" etag="YGOuHKgZtVslPnwLMXNw" version="24.1.0" type="device">
+  <diagram name="第 1 页" id="dy8baexr2paWgTkw0r5Y">
+    <mxGraphModel dx="1436" dy="968" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="tJvPCn1hewEJFcLs1BAq-3" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="tJvPCn1hewEJFcLs1BAq-1" target="tJvPCn1hewEJFcLs1BAq-2">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="tJvPCn1hewEJFcLs1BAq-1" value="&lt;font style=&quot;font-size: 14px;&quot;&gt;系统启动并初始化&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="230" y="110" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="tJvPCn1hewEJFcLs1BAq-5" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="tJvPCn1hewEJFcLs1BAq-2" target="tJvPCn1hewEJFcLs1BAq-4">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="tJvPCn1hewEJFcLs1BAq-2" value="&lt;font style=&quot;font-size: 14px;&quot;&gt;两舵机角度归零&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="230" y="220" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="tJvPCn1hewEJFcLs1BAq-10" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="tJvPCn1hewEJFcLs1BAq-4" target="tJvPCn1hewEJFcLs1BAq-8">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="tJvPCn1hewEJFcLs1BAq-18" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="tJvPCn1hewEJFcLs1BAq-4" target="tJvPCn1hewEJFcLs1BAq-17">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="tJvPCn1hewEJFcLs1BAq-19" value="超时" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="tJvPCn1hewEJFcLs1BAq-18">
+          <mxGeometry x="-0.1933" y="2" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="tJvPCn1hewEJFcLs1BAq-4" value="&lt;font style=&quot;font-size: 14px;&quot;&gt;等待运动指令&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="230" y="350" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="tJvPCn1hewEJFcLs1BAq-7" value="指令周期" style="swimlane;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="200" y="300" width="590" height="760" as="geometry" />
+        </mxCell>
+        <mxCell id="tJvPCn1hewEJFcLs1BAq-11" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="tJvPCn1hewEJFcLs1BAq-7" source="tJvPCn1hewEJFcLs1BAq-8" target="tJvPCn1hewEJFcLs1BAq-9">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="tJvPCn1hewEJFcLs1BAq-8" value="&lt;font style=&quot;font-size: 14px;&quot;&gt;转化为两舵机转动角度&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="tJvPCn1hewEJFcLs1BAq-7">
+          <mxGeometry x="30" y="130" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="tJvPCn1hewEJFcLs1BAq-14" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="tJvPCn1hewEJFcLs1BAq-7" source="tJvPCn1hewEJFcLs1BAq-9" target="tJvPCn1hewEJFcLs1BAq-13">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="tJvPCn1hewEJFcLs1BAq-15" value="否" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="tJvPCn1hewEJFcLs1BAq-14">
+          <mxGeometry x="-0.2711" y="-2" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="tJvPCn1hewEJFcLs1BAq-22" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="tJvPCn1hewEJFcLs1BAq-7" source="tJvPCn1hewEJFcLs1BAq-9" target="tJvPCn1hewEJFcLs1BAq-21">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="tJvPCn1hewEJFcLs1BAq-25" value="是" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="tJvPCn1hewEJFcLs1BAq-22">
+          <mxGeometry x="-0.3833" y="-1" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="tJvPCn1hewEJFcLs1BAq-9" value="&lt;font style=&quot;font-size: 14px;&quot;&gt;与上一周期&lt;font style=&quot;&quot;&gt;角度&lt;/font&gt;不同&lt;/font&gt;" style="rhombus;whiteSpace=wrap;html=1;" vertex="1" parent="tJvPCn1hewEJFcLs1BAq-7">
+          <mxGeometry x="15" y="220" width="150" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="tJvPCn1hewEJFcLs1BAq-13" value="&lt;font style=&quot;font-size: 14px;&quot;&gt;舵机角度保持不变&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="tJvPCn1hewEJFcLs1BAq-7">
+          <mxGeometry x="250" y="230" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="tJvPCn1hewEJFcLs1BAq-17" value="&lt;font style=&quot;font-size: 14px;&quot;&gt;两舵机角度归零并上报错误&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="tJvPCn1hewEJFcLs1BAq-7">
+          <mxGeometry x="250" y="50" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="tJvPCn1hewEJFcLs1BAq-26" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="tJvPCn1hewEJFcLs1BAq-7" source="tJvPCn1hewEJFcLs1BAq-21" target="tJvPCn1hewEJFcLs1BAq-23">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="tJvPCn1hewEJFcLs1BAq-21" value="&lt;span style=&quot;font-size: 14px;&quot;&gt;推杆舵机角度归零&lt;/span&gt;" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="tJvPCn1hewEJFcLs1BAq-7">
+          <mxGeometry x="30" y="340" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="tJvPCn1hewEJFcLs1BAq-27" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="tJvPCn1hewEJFcLs1BAq-7" source="tJvPCn1hewEJFcLs1BAq-23" target="tJvPCn1hewEJFcLs1BAq-24">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="tJvPCn1hewEJFcLs1BAq-23" value="&lt;span style=&quot;font-size: 14px;&quot;&gt;转杆舵机角度设置&lt;/span&gt;" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="tJvPCn1hewEJFcLs1BAq-7">
+          <mxGeometry x="30" y="440" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="tJvPCn1hewEJFcLs1BAq-31" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="tJvPCn1hewEJFcLs1BAq-7" source="tJvPCn1hewEJFcLs1BAq-24" target="tJvPCn1hewEJFcLs1BAq-29">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="tJvPCn1hewEJFcLs1BAq-24" value="&lt;span style=&quot;font-size: 14px;&quot;&gt;推杆舵机角度设置&lt;/span&gt;" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="tJvPCn1hewEJFcLs1BAq-7">
+          <mxGeometry x="30" y="540" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="tJvPCn1hewEJFcLs1BAq-29" value="&lt;span style=&quot;font-size: 14px;&quot;&gt;摇杆到达目标位置&lt;/span&gt;" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="tJvPCn1hewEJFcLs1BAq-7">
+          <mxGeometry x="30" y="650" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="tJvPCn1hewEJFcLs1BAq-32" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="tJvPCn1hewEJFcLs1BAq-29" target="tJvPCn1hewEJFcLs1BAq-4">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="290" y="1030" />
+              <mxPoint x="210" y="1030" />
+              <mxPoint x="210" y="380" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="tJvPCn1hewEJFcLs1BAq-33" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="tJvPCn1hewEJFcLs1BAq-13" target="tJvPCn1hewEJFcLs1BAq-4">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="510" y="1030" />
+              <mxPoint x="210" y="1030" />
+              <mxPoint x="210" y="380" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
